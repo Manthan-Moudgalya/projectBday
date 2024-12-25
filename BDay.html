@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        
+        *{
+            user-select: none;
+        }
+        
+        body{     
+            background-image: linear-gradient(147deg, #008cff 0%, #ab24ff 74%);           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .card-container{
+            height: 70%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .card:hover .outside{
+            animation: sliding1 10s ease-in-out;
+        }
+
+        .card:hover .outside1{
+            animation: sliding2 10s ease-in-out;
+        }
+        @keyframes sliding2 {
+            0%{
+                transform: translateX(0);
+            }   
+            25% {
+                transform: translateX(-101%);   
+            }
+            50%{
+                transform: translateX(0px) translateY(-15%);   
+                z-index: -10;
+            } 
+
+            75% {
+                transform: translateX(101%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+            
+        }
+
+        @keyframes sliding1 {
+            0%{
+                transform: translateX(0);
+            }   
+            25% {
+                transform: translateX(101%);   
+            }
+            50%{
+                transform: translateX(0px) translateY(15%);   
+                z-index: 10;
+            }
+
+            75% {
+                transform: translateX(-101%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+            
+        }
+      
+        .outside, .outside1 {
+            border: 3px solid rgb(0, 0, 185);
+            background: white;
+            position: absolute;
+            height: 100%;
+            width: 27vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: Poppins;
+            border-radius: 30px;
+        }
+
+        
+        .outside > p, .outside1 > p{
+            font-size: 2.5em;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+
+        .outside1 > p{
+            font-size: 2.3em;
+            padding: 5% ;
+        }
+        
+        .outside > p:first-child, .outside1 > p:first-child{
+            margin-top: 20px;
+        }
+        
+        .outside > img{
+            margin-top: 80px;
+        }
+
+
+        .inside{
+            position: absolute;
+            border-radius: 30px;
+            height: 100%;
+            width: 27vw;
+            border: 3px solid rgb(0, 0, 185);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF; 
+        }
+
+        .inside > p{
+            font-size: 20px;
+            font-family: Poppins;
+            padding: 10%;
+            animation: floatText 2s ease-in-out infinite;
+        }
+        
+        
+        @keyframes floatText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            
+            <div class="outside">
+                <p>お誕生日おめでとう <br> Bhargavi!</p>
+                <img src="Gojo Cake.png" height="200px" alt="">
+            </div>
+
+            <div class="outside1">
+                <p>誕生日おめでとうございます!</p>
+                <img src="megumi.png" height="200px" alt="">
+            </div>
+            
+            <div class="inside">
+                <p>May your day be filled with joy, your year with purpose, and your life with love. Happy Birthday!!</p>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>  
